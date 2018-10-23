@@ -115,8 +115,22 @@ public class AVLTree {
 
         // insert the key-value pair in the subtree rooted at h
         private Node put(Node h, Key key, Value val) {
-        /**PUT CODE**/
-            return h;
+
+       Node h=  new Node(key,val);
+      if (root == null){root = x;}
+      else if ((x.getKey().compareTo(n.getKey())<0) && n.getLeft() == null){
+        n.setLeft(x);
+        }
+        else if ((x.getKey().compareTo(n.getKey())>0) && n.getRight() == null){
+            n.setRight(x);
+        }
+      else if (x.getKey().compareTo(n.getKey())==0){
+            n.setValue(val);
+        }
+        else if (x.getKey().compareTo(n.getKey())<0){put(n.getLeft(),key,val);}
+      else {put(n.getRight(),key,val);}
+
+
         }
 
         /***************************************************************************
