@@ -7,8 +7,8 @@
  * ON MY HONOR: IH
  */
 
-public class AVLTree {
-    {
+public class AVLTree <Key extends Comparable<Key>, Value> {
+
         public Node root;     // root of the BST
 
 
@@ -116,19 +116,19 @@ public class AVLTree {
         // insert the key-value pair in the subtree rooted at h
         private Node put(Node h, Key key, Value val) {
 
-       Node h=  new Node(key,val);
+       Node x=  new Node(key,val,height());
       if (root == null){root = x;}
-      else if ((x.getKey().compareTo(n.getKey())<0) && n.getLeft() == null){
-        n.setLeft(x);
+      else if ((x.getKey().compareTo(h.getKey())<0) && h.getLeft() == null){
+        h.setLeft(x);
         }
-        else if ((x.getKey().compareTo(n.getKey())>0) && n.getRight() == null){
-            n.setRight(x);
+        else if ((x.getKey().compareTo(h.getKey())>0) && h.getRight() == null){
+            h.setRight(x);
         }
-      else if (x.getKey().compareTo(n.getKey())==0){
-            n.setValue(val);
+      else if (x.getKey().compareTo(h.getKey())==0){
+            h.setValue(val);
         }
-        else if (x.getKey().compareTo(n.getKey())<0){put(n.getLeft(),key,val);}
-      else {put(n.getRight(),key,val);}
+        else if (h.getKey().compareTo(h.getKey())<0){put(h.getLeft(),key,val);}
+      else {put(h.getRight(),key,val);}
 
 
         }
@@ -197,8 +197,20 @@ public class AVLTree {
         // delete the key-value pair with the given key rooted at h
         private Node delete(Node h, Key key) {
             // assert get(h, key) != null;
-
-            /**delete**/
+            if(h == null) return null;
+            int i = key.compareTo(h.getKey());
+            if( i < 0) {
+                h.setLeft(remove(h.getLeft(), key));
+            } else if(i > 0) {
+                h.setRight(remove(h.getRight(), key));
+            }else {
+                if(h.getRight() == null) return h.getLeft();
+                if(h.getLeft() == null) return h.getRight();
+                Node min = min(h.getRight());
+                min.setLeft(h.getLeft());
+                h = h.getRight();
+            }
+            h.setSize(size(h.getRight()) + size(h.getLeft()) + 1);
 
             return balance(h);
         }
