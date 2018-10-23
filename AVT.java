@@ -151,16 +151,13 @@ public class AVLTree {
             if (isEmpty()) throw new NoSuchElementException("BST underflow");
 
             // if both children of root are black, set root to red
-            if (!isRed(root.left) && !isRed(root.right))
-                root.color = RED;
 
             root = deleteMax(root);
-            if (!isEmpty()) root.color = BLACK;
             // assert check();
         }
 
             // delete the key-value pair with the maximum key rooted at h
-            private Node deleteMax(Node h) {
+        private Node deleteMax(Node h) {
             /**deleteMax**/
 
             return balance(h);
@@ -178,11 +175,8 @@ public class AVLTree {
             if (!contains(key)) return;
 
             // if both children of root are black, set root to red
-            if (!isRed(root.left) && !isRed(root.right))
-                root.color = RED;
 
             root = delete(root, key);
-            if (!isEmpty()) root.color = BLACK;
             // assert check();
         }
 
