@@ -4,26 +4,20 @@ public class Node<Key extends Comparable<Key>, Value> {
     public Value value;
     public Node<Key, Value> left;
     public Node<Key, Value> right;
-    public boolean color;
     public int size;
-    public static final boolean RED = false;
-    public static final boolean BLACK = true;
 
-    public Node(Key key, Value value,boolean color,int size) {
+    public Node(Key key, Value value, int size) {
         this.key = key;
         this.value = value;
-        this.color=color;
         this.size = size;
     }
 
     @Override
     public String toString() {
-        String color = "black";
-        if (this.color ==(RED)){color = "red";}
         return "Node{" +
                 "key=" + key +
                 ", value=" + value +
-                "}, color= "+ color;
+                "}";
     }
 
     public Key getKey() {

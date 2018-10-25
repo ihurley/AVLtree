@@ -1,44 +1,27 @@
-import java.util.NoSuchElementException;
-
 /**
  * Name: Izzy Hurley
- * Lab Name: AVTDriver
- * Lab Purpose: The goal of AVTDriver is to create a program
+ * Lab Name: AVT
+ * Lab Purpose: The goal of AVT is to create a program
  * Date: 10/23/18
  * Collaborators: None
  * ON MY HONOR: IH
  */
-import java.util.NoSuchElementException;
-import java.util.Queue;
-public class AVTDriver <Key extends Comparable<Key>, Value> {
+import java.lang.Math.*;
+import java.util.*;
+public class AVLTree <Key extends Comparable<Key>, Value> {
 
-
-
-
- {
-        private static final boolean RED = true;
-        private static final boolean BLACK = false;
         public Node root;     // root of the BST
 
 
         /**
          * Initializes an empty symbol table.
          */
-        public RBTree() {}
+        public AVLTree() {}
 
-        public RBTree(Node Root) {
+        public AVLTree(Node Root) {
             root = Root;
         }
 
-
-        /***************************************************************************
-         *  Node helper methods.
-         ***************************************************************************/
-        // is node x red; false if x is null ?
-        private boolean isRed(Node x) {
-            if (x == null) return false;
-            return x.color == RED;
-        }
 
         // number of node in subtree rooted at x; 0 if x is null
         private int size(Node x) {
@@ -80,7 +63,7 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
          */
         public Value get(Key key) {
             if (key == null) throw new IllegalArgumentException("argument to get() is null");
-            return get(root, key);
+                return get(root, key);
         }
 
         // value associated with the given key in subtree rooted at x; null if no such key
@@ -128,14 +111,12 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
             }
 
             root = put(root, key, val);
-            root.color = BLACK;
             // assert check();
         }
 
         // insert the key-value pair in the subtree rooted at h
         private Node put(Node h, Key key, Value val) {
-            /**PUT CODE**/
-
+        /**PUT CODE**/
             return h;
         }
 
@@ -151,18 +132,13 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
         public void deleteMin() {
             if (isEmpty()) throw new NoSuchElementException("BST underflow");
 
-            // if both children of root are black, set root to red
-            if (!isRed(root.left) && !isRed(root.right))
-                root.color = RED;
-
             root = deleteMin(root);
-            if (!isEmpty()) root.color = BLACK;
             // assert check();
         }
 
         // delete the key-value pair with the minimum key rooted at h
         private Node deleteMin(Node h) {
-            /**deleteMin**/
+        /**deleteMin**/
             return balance(h);
         }
 
@@ -176,15 +152,12 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
             if (isEmpty()) throw new NoSuchElementException("BST underflow");
 
             // if both children of root are black, set root to red
-            if (!isRed(root.left) && !isRed(root.right))
-                root.color = RED;
 
             root = deleteMax(root);
-            if (!isEmpty()) root.color = BLACK;
             // assert check();
         }
 
-        // delete the key-value pair with the maximum key rooted at h
+            // delete the key-value pair with the maximum key rooted at h
         private Node deleteMax(Node h) {
             /**deleteMax**/
 
@@ -203,11 +176,8 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
             if (!contains(key)) return;
 
             // if both children of root are black, set root to red
-            if (!isRed(root.left) && !isRed(root.right))
-                root.color = RED;
 
             root = delete(root, key);
-            if (!isEmpty()) root.color = BLACK;
             // assert check();
         }
 
@@ -219,15 +189,8 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
 
             return balance(h);
         }
-
-        /***************************************************************************
-         *  Red-black tree helper functions.
-         ***************************************************************************/
-
-        // make a left-leaning link lean to the right
         public Node rotateRight(Node h) {
-            assert (h != null) && isRed(h.left);
-            /**ROTATE RIGHT**/
+        /**ROTATE RIGHT**/
 
             Node nRoot = h.left;
             Node orphan = h.left.right;
@@ -239,8 +202,7 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
 
         // make a right-leaning link lean to the left
         public Node rotateLeft(Node h) {
-            assert (h != null) && isRed(h.right);
-            /**ROTATE LEFT**/
+        /**ROTATE LEFT**/
 
 
             Node nRoot = h.right;
@@ -254,48 +216,26 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
 
         }
         public static boolean isGParent(Node n){
-            if (n.right != null && (n.right.right != null || n.right.left != null)) {return true;
-            }
-            else if (n.left != null && (n.left.right != null || n.left.left != null)){return true;}
-            else return false;
+            if (n.right != null && (n.right.right != null || n.right.left != null)) {
+                return true;
+            } else if (n.left != null && (n.left.right != null || n.left.left != null)) {
+                return true;
+            } else return false;
         }
-
-        // flip the colors of a node and its two children
-        private void flipColors(Node h) {
-            // h must have opposite color of its two children
-            // assert (h != null) && (h.left != null) && (h.right != null);
-            // assert (!isRed(h) &&  isRed(h.left) &&  isRed(h.right))
-            //    || (isRed(h)  && !isRed(h.left) && !isRed(h.right));
-
-            //HINT: NOT RECURSIVE
-        }
-
-        // Assuming that h is red and both h.left and h.left.left
-        // are black, make h.left or one of its children red.
-        private Node moveRedLeft(Node h) {
-            assert (h != null);
-            assert isRed(h) && !isRed(h.left) && !isRed(h.left.left);
-
-
-            return h;
-        }
-
-        // Assuming that h is red and both h.right and h.right.left
-        // are black, make h.right or one of its children red.
-        private Node moveRedRight(Node h) {
-            assert (h != null);
-            assert isRed(h) && !isRed(h.right) && !isRed(h.right.left);
-
-            return h;
-        }
-
-        // restore red-black tree invariant
         private Node balance(Node h) {
-            // assert (h != null);
+        // assert (h != null);
+        //update h's size
+            if(Math.abs(height(h.getRight())-height(h.getLeft()))>1){
+                if (height(h.getRight()) > height(h.getLeft())) {
+                    h = rotateRight(h);
+                } else
+                    h = rotateLeft(h);
+            }
+            else{
+                return h;
+            }
+            return balance(h);
 
-            //rotate right or left or recolor the nodes appropriately
-            //update h's size
-            return h;
         }
 
 
@@ -336,7 +276,7 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
 
         // the smallest key in subtree rooted at x; null if no such key
         private Node min(Node x) {
-            // assert x != null;
+        // assert x != null;
             if (x.left == null) return x;
             else return min(x.left);
         }
@@ -354,53 +294,14 @@ public class AVTDriver <Key extends Comparable<Key>, Value> {
 
         // the largest key in the subtree rooted at x; null if no such key
         private Node max(Node x) {
-            // assert x != null;
+        // assert x != null;
             if (x.right == null) return x;
             else return max(x.right);
         }
-        public boolean isRBT(){
-            return isRBT(root);}
 
-        private boolean isRBT(Node current) {
-            if (current == null) {
-                return true;
-            } else if ((current==root &&current.color== Node.BLACK) &&current.getLeft() == null && current.getRight() == null) {
-                return true;
-            }
-            else if (current.color== Node.BLACK&&current.getLeft() == null && current.getRight().color==Node.RED&& current.getLeft().size==1) {
-                return true;
-            }
-            else if (current.getLeft() == null && current.getRight().color!=Node.RED) {
-                return false;
-            }
-            else if (current.color==Node.BLACK &&current.getRight() == null && current.getLeft().color==Node.RED&& current.getLeft().size==1) {
-                return true;
-            }
-            else if (current.getRight() == null && current.getLeft().color!=Node.RED) {
-                return false;
-            }
-
-
-            //else if (current.left == null && current.right != null){}
-
-
-            else if(current.color != current.left.color && current.color != current.right.color
-                    && current.left.size == current.right.size
-                    && current.getLeft().getKey().compareTo(current.getRight().getKey())<0){
-                return isRBT(current.left) && isRBT(current.right);
-            }
-            else if(current.color != current.left.color && current.right == null
-                    && current.left.size == 1
-                    && current.getLeft().getKey().compareTo(current.getRight().getKey())<0){
-                return isRBT(current.left) && isRBT(current.right);
-            }
-            else return false;
-            //compare sizes- black hieght of both subtrees and check that subtrees are of a different color and then test that the left is smaller)){}
+        public boolean isAVL(){
+            //code
+            return false;
         }
-
-
-
-
-
     }
-}
+
