@@ -7,6 +7,7 @@
  * ON MY HONOR: IH
  */
 import java.lang.Math.*;
+import java.util.*;
 public class AVLTree <Key extends Comparable<Key>, Value> {
 
         public Node root;     // root of the BST
@@ -189,7 +190,6 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
             return balance(h);
         }
         public Node rotateRight(Node h) {
-            assert (h != null);
         /**ROTATE RIGHT**/
 
             Node nRoot = h.left;
@@ -202,7 +202,6 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
 
         // make a right-leaning link lean to the left
         public Node rotateLeft(Node h) {
-            assert (h != null);
         /**ROTATE LEFT**/
 
 
@@ -226,11 +225,11 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         private Node balance(Node h) {
         // assert (h != null);
         //update h's size
-            if(Math.abs(height(h.getRight())-height(h.getLeft())>1)){
+            if(Math.abs(height(h.getRight())-height(h.getLeft()))>1){
                 if (height(h.getRight()) > height(h.getLeft())) {
-                    h.rotateRight();
+                    h = rotateRight(h);
                 } else
-                    h.rotateLeft();
+                    h = rotateLeft(h);
             }
             else{
                 return h;
