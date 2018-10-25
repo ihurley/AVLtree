@@ -6,9 +6,9 @@
  * Collaborators: None
  * ON MY HONOR: IH
  */
+import java.lang.Math.*;
+public class AVLTree <Key extends Comparable<Key>, Value> {
 
-public class AVLTree {
-    {
         public Node root;     // root of the BST
 
 
@@ -225,10 +225,18 @@ public class AVLTree {
         }
         private Node balance(Node h) {
         // assert (h != null);
-
-        //rotate right or left or recolor the nodes appropriately
         //update h's size
-            return h;
+            if(Math.abs(height(h.getRight())-height(h.getLeft())>1)){
+                if (height(h.getRight()) > height(h.getLeft())) {
+                    h.rotateRight();
+                } else
+                    h.rotateLeft();
+            }
+            else{
+                return h;
+            }
+            return balance(h);
+
         }
 
 
