@@ -11,5 +11,7 @@ import java.util.NoSuchElementException;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 public class AVTDriver <Key extends Comparable<Key>, Value> {
+Node r = new Node("root",10,0);
+Node l = new Node("left",9,0);
 
 }
