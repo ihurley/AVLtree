@@ -9,10 +9,7 @@
 import java.lang.Math.*;
 import java.util.*;
 public class AVLTree <Key extends Comparable<Key>, Value> {
-
         public Node root;     // root of the BST
-
-
         /**
          * Initializes an empty symbol table.
          */
@@ -116,15 +113,29 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
 
         // insert the key-value pair in the subtree rooted at h
         private Node put(Node h, Key key, Value val) {
-        /**PUT CODE**/
-            return h;
+
+       Node x=  new Node(key,val,height());
+      if (root == null){return new Node(key,val,0);}
+
+      //WHAT TO RETURN FOR THESE
+      else if ((x.getKey().compareTo(h.getKey())<0) && h.getLeft() == null){
+        h.setLeft(x); return balance(h);
+        }
+        else if ((x.getKey().compareTo(h.getKey())>0) && h.getRight() == null){
+         h.setRight(x); return balance(h);
+        }
+      else if (x.getKey().compareTo(h.getKey())==0){
+            h.setValue(val); return balance(h);}
+
+
+        else if (h.getKey().compareTo(h.getKey())<0){  h.setLeft(put(h.getLeft(),key,val)); return balance(h); }
+      else { h.setRight(put(h.getRight(),key,val)); return balance(h);} }
+
+      /*  The current node must be one of the ancestors of the newly inserted node. Update the height of the current node.
+
         }
 
-        /***************************************************************************
-         *  Red-black tree deletion.
-         ***************************************************************************/
 
-        /**
          * Removes the smallest key and associated value from the symbol table.
          *
          * @throws NoSuchElementException if the symbol table is empty
@@ -183,11 +194,27 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
 
         // delete the key-value pair with the given key rooted at h
         private Node delete(Node h, Key key) {
-            // assert get(h, key) != null;
+             assert get(h, key) != null;
 
-            /**delete**/
+            if(h == null) return null;
+            int i = key.compareTo((Key) h.getKey());
 
-            return balance(h);
+            if( i < 0) {
+                h.setLeft(delete(h.getLeft(), key)); return balance(h);
+            } else if(i > 0) {
+                h.setRight(delete(h.getRight(), key)); return balance(h); }
+
+                else {
+                if(h.getRight() == null) return h.getLeft();
+                if(h.getLeft() == null) return h.getRight();
+                Node min = min(h.getRight());
+                min.setLeft(h.getLeft());
+                h = h.getRight(); //works because of recursive balance
+            }
+            h = balance(h);
+            h.setSize(size(h.getRight()) + size(h.getLeft()) + 1);
+            return h;
+
         }
         public Node rotateRight(Node h) {
         /**ROTATE RIGHT**/
