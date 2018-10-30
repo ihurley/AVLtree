@@ -115,20 +115,20 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         private Node put(Node h, Key key, Value val) {
 
        Node x=  new Node(key,val,height());
-      if (root == null){return new Node(key,val,0);}
+      if (h == null){return new Node(key,val,0);}
 
       //WHAT TO RETURN FOR THESE
-      else if ((x.getKey().compareTo(h.getKey())<0) && h.getLeft() == null){
+      else if (h!=null && (x.getKey().compareTo(h.getKey())<0) && h.getLeft() == null){
         h.setLeft(x); return balance(h);
         }
-        else if ((x.getKey().compareTo(h.getKey())>0) && h.getRight() == null){
+        else if (h!=null && (x.getKey().compareTo(h.getKey())>0) && h.getRight() == null){
          h.setRight(x); return balance(h);
         }
-      else if (x.getKey().compareTo(h.getKey())==0){
+      else if (h!=null && x.getKey().compareTo(h.getKey())==0){
             h.setValue(val); return balance(h);}
 
 
-        else if (h.getKey().compareTo(h.getKey())<0){  h.setLeft(put(h.getLeft(),key,val)); return balance(h); }
+        else if (h!=null && h.getKey().compareTo(x.getKey())<0){  h.setLeft(put(h.getLeft(),key,val)); return balance(h); }
       else { h.setRight(put(h.getRight(),key,val)); return balance(h);} }
 
       /*  The current node must be one of the ancestors of the newly inserted node. Update the height of the current node.
@@ -218,7 +218,7 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         }
         public Node rotateRight(Node h) {
         /**ROTATE RIGHT**/
-
+            assert(h.left.right!=null);
             Node nRoot = h.left;
             Node orphan = h.left.right;
             h.setLeft(orphan);
@@ -230,8 +230,7 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         // make a right-leaning link lean to the left
         public Node rotateLeft(Node h) {
         /**ROTATE LEFT**/
-
-
+            assert(h.right.left!=null);
             Node nRoot = h.right;
             Node orphan = h.right.left;
             h.setRight(orphan);
@@ -252,6 +251,7 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         private Node balance(Node h) {
         // assert (h != null);
         //update h's size
+            System.out.println(h);
             if(Math.abs(height(h.getRight())-height(h.getLeft()))>1){
                 if (height(h.getRight()) > height(h.getLeft())) {
                     h = rotateRight(h);
@@ -325,7 +325,6 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
             if (x.right == null) return x;
             else return max(x.right);
         }
-
         public boolean isAVL(){
             //code
             return false;
