@@ -107,7 +107,7 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
                 return;
             }
 
-            root = put(root, key, val);
+            root = balance(put(root, key, val));
             // assert check();
         }
 
@@ -121,22 +121,21 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
           if(h.getLeft()==null){
               h.setLeft(x);
           }else{
-              h = put(h.getLeft(), key, val);
+              h.setRight(put(h.getLeft(), key, val));
           }
-          return balance(h);
       }
       else if(x.getKey().compareTo(h.getKey())>0){
           if(h.getRight()==null){
               h.setRight(x);
           }
           else{
-              h = put(h.getRight(), key, val);
+              h.setRight(put(h.getRight(), key, val));
           }
-          return balance(h);
       }
       else if (h!=null && x.getKey().compareTo(h.getKey())==0){
             h.setValue(val); return balance(h);
       }
+      return h;
       }
 
       /*  The current node must be one of the ancestors of the newly inserted node. Update the height of the current node.
@@ -226,7 +225,7 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         }
         public Node rotateRight(Node h) {
         /**ROTATE RIGHT**/
-            if(h.left.right==null){
+            if(h.left==null || h.left.right==null){
                 return null;
             }
             Node nRoot = h.left;
@@ -266,9 +265,9 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         //update h's size
             if(Math.abs(height(h.getRight())-height(h.getLeft()))>1){
                 if (height(h.getRight()) > height(h.getLeft())) {
-                    h = rotateRight(h);
+                    h = rotateLeft(h);
                 } else
-                h = rotateLeft(h);
+                h = rotateRight(h);
             }
             else{
                 return h;
