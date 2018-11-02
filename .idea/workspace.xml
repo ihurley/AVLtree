@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="040b445a-d2d9-4d60-97f1-a9ab8583a0a3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVT/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVT/src/AVLTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVT/src/AVTDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVT/src/AVTDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,13 +16,15 @@
       <file leaf-file-name="AVLTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AVT/src/AVLTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="253" column="32" selection-start-line="253" selection-start-column="31" selection-end-line="253" selection-end-column="32" />
+            <state relative-caret-position="184">
+              <caret line="315" column="123" selection-start-line="315" selection-start-column="123" selection-end-line="315" selection-end-column="123" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#9172#9173#0" expanded="true" />
                 <element signature="e#9215#9216#0" expanded="true" />
+                <element signature="e#10087#10088#0" expanded="true" />
+                <element signature="e#10132#10133#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,7 +33,7 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVT/src/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
+            <state relative-caret-position="225">
               <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
@@ -318,33 +318,39 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>221</line>
+          <line>223</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>222</line>
+          <line>224</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>223</line>
+          <line>225</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>224</line>
+          <line>226</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>226</line>
+          <line>228</line>
           <properties />
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>258</line>
+          <properties />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
@@ -355,7 +361,7 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -368,6 +374,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -391,6 +399,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -418,6 +428,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -445,6 +457,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -475,6 +489,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -495,6 +511,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -522,6 +540,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -552,6 +572,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -570,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVT/src/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AVT/src/AVTDriver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -587,15 +602,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AVT/src/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AVT/src/AVLTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="253" column="32" selection-start-line="253" selection-start-column="31" selection-end-line="253" selection-end-column="32" />
+        <state relative-caret-position="184">
+          <caret line="315" column="123" selection-start-line="315" selection-start-column="123" selection-end-line="315" selection-end-column="123" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#9172#9173#0" expanded="true" />
             <element signature="e#9215#9216#0" expanded="true" />
+            <element signature="e#10087#10088#0" expanded="true" />
+            <element signature="e#10132#10133#0" expanded="true" />
           </folding>
         </state>
       </provider>
