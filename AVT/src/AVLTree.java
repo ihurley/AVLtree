@@ -115,20 +115,20 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         private Node put(Node h, Key key, Value val) {
 
        Node x=  new Node(key,val,height());
-      if (root == null){return new Node(key,val,0);}
+      if (h == null){return new Node(key,val,0);}
 
       //WHAT TO RETURN FOR THESE
-      else if ((x.getKey().compareTo(h.getKey())<0) && h.getLeft() == null){
+      else if (h!=null && (x.getKey().compareTo(h.getKey())<0) && h.getLeft() == null){
         h.setLeft(x); return balance(h);
         }
-        else if ((x.getKey().compareTo(h.getKey())>0) && h.getRight() == null){
+        else if (h!=null && (x.getKey().compareTo(h.getKey())>0) && h.getRight() == null){
          h.setRight(x); return balance(h);
         }
-      else if (x.getKey().compareTo(h.getKey())==0){
+      else if (h!=null && x.getKey().compareTo(h.getKey())==0){
             h.setValue(val); return balance(h);}
 
 
-        else if (h.getKey().compareTo(h.getKey())<0){  h.setLeft(put(h.getLeft(),key,val)); return balance(h); }
+        else if (h!=null && h.getKey().compareTo(x.getKey())<0){  h.setLeft(put(h.getLeft(),key,val)); return balance(h); }
       else { h.setRight(put(h.getRight(),key,val)); return balance(h);} }
 
       /*  The current node must be one of the ancestors of the newly inserted node. Update the height of the current node.
@@ -218,7 +218,9 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         }
         public Node rotateRight(Node h) {
         /**ROTATE RIGHT**/
-
+            if(h.left.right==null){
+                return null;
+            }
             Node nRoot = h.left;
             Node orphan = h.left.right;
             h.setLeft(orphan);
@@ -230,8 +232,9 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
         // make a right-leaning link lean to the left
         public Node rotateLeft(Node h) {
         /**ROTATE LEFT**/
-
-
+            if(h.right.left==null){
+                return null;
+            }
             Node nRoot = h.right;
             Node orphan = h.right.left;
             h.setRight(orphan);
@@ -250,13 +253,14 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
             } else return false;
         }
         private Node balance(Node h) {
-        // assert (h != null);
+            System.out.println(toString(h));
+            assert (h != null);
         //update h's size
             if(Math.abs(height(h.getRight())-height(h.getLeft()))>1){
                 if (height(h.getRight()) > height(h.getLeft())) {
                     h = rotateRight(h);
                 } else
-                    h = rotateLeft(h);
+                h = rotateLeft(h);
             }
             else{
                 return h;
@@ -300,6 +304,17 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
             if (isEmpty()) throw new NoSuchElementException("calls min() with empty symbol table");
             return (Key)min(root).key;
         }
+        public String toString(){
+            return toString(root);
+        }
+        private String toString(Node node){
+            String x = "";
+            for (int i = 0; i < height(node); i++) {
+                x.concat("  ");
+            }
+            if(node==null) return "x";
+            else return x+"/" + node.getKey() + "\\" + "\n" + toString(node.getLeft()) + "    " + toString(node.getRight());
+        }
 
         // the smallest key in subtree rooted at x; null if no such key
         private Node min(Node x) {
@@ -325,7 +340,6 @@ public class AVLTree <Key extends Comparable<Key>, Value> {
             if (x.right == null) return x;
             else return max(x.right);
         }
-
         public boolean isAVL(){
             //code
             return false;

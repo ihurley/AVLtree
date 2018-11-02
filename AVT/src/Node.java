@@ -1,3 +1,4 @@
+
 public class Node<Key extends Comparable<Key>, Value> {
 
     public Key key;
@@ -53,6 +54,12 @@ public class Node<Key extends Comparable<Key>, Value> {
     }
 
     public int getSize() {
+        int size = 1;
+        if(getLeft()!=null){
+            size += getLeft().getSize();
+        }if(getRight()!=null){
+            size += getRight().getSize();
+        }
         return size;
     }
 
