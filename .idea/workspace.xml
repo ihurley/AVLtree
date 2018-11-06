@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="040b445a-d2d9-4d60-97f1-a9ab8583a0a3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVT/src/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVT/src/AVLTree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +17,17 @@
       <file leaf-file-name="AVLTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AVT/src/AVLTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="269" column="31" selection-start-line="269" selection-start-column="31" selection-end-line="269" selection-end-column="31" />
+            <state relative-caret-position="156">
+              <caret line="280" column="38" lean-forward="true" selection-start-line="280" selection-start-column="38" selection-end-line="280" selection-end-column="38" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#9479#9480#0" expanded="true" />
-                <element signature="e#9522#9523#0" expanded="true" />
-                <element signature="e#10320#10321#0" expanded="true" />
-                <element signature="e#10369#10370#0" expanded="true" />
+                <element signature="e#2812#2813#0" expanded="true" />
+                <element signature="e#2859#2860#0" expanded="true" />
+                <element signature="e#9992#9993#0" expanded="true" />
+                <element signature="e#10035#10036#0" expanded="true" />
+                <element signature="e#10833#10834#0" expanded="true" />
+                <element signature="e#10882#10883#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,8 +36,8 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVT/src/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="105">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -63,6 +66,7 @@
       <find>assert</find>
       <find>size</find>
       <find>balance</find>
+      <find>insert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,8 +78,8 @@
         <option value="$PROJECT_DIR$/Node.java" />
         <option value="$PROJECT_DIR$/AVTDriver.java" />
         <option value="$PROJECT_DIR$/AVT.java" />
-        <option value="$PROJECT_DIR$/AVT/src/Node.java" />
         <option value="$PROJECT_DIR$/AVT/src/AVTDriver.java" />
+        <option value="$PROJECT_DIR$/AVT/src/Node.java" />
         <option value="$PROJECT_DIR$/AVT/src/AVLTree.java" />
       </list>
     </option>
@@ -320,44 +324,114 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>230</line>
+          <line>228</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>231</line>
+          <line>229</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>232</line>
+          <line>230</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>233</line>
+          <line>231</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>235</line>
+          <line>233</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>236</line>
+          <properties />
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>237</line>
+          <properties />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>244</line>
+          <properties />
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>245</line>
+          <properties />
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>276</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>278</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>279</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>281</line>
+          <properties />
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>284</line>
+          <properties />
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
-          <line>225</line>
+          <line>223</line>
           <properties class="AVLTree" method="rotateRight">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>235</line>
+          <properties class="AVLTree" method="rotateRight">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/AVT/src/AVLTree.java</url>
+          <line>243</line>
+          <properties class="AVLTree" method="rotateLeft">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="74" />
+      <option name="time" value="90" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -368,10 +442,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -393,10 +469,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -422,10 +500,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -451,10 +531,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -483,10 +565,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -505,10 +589,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -534,10 +620,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -566,10 +654,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,10 +702,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -627,10 +719,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -652,10 +746,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -681,10 +777,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -710,10 +808,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -742,10 +842,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -764,10 +866,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,10 +897,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -825,10 +931,12 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -847,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVT/src/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AVT/src/AVTDriver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -864,17 +965,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AVT/src/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AVT/src/AVLTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="269" column="31" selection-start-line="269" selection-start-column="31" selection-end-line="269" selection-end-column="31" />
+        <state relative-caret-position="156">
+          <caret line="280" column="38" lean-forward="true" selection-start-line="280" selection-start-column="38" selection-end-line="280" selection-end-column="38" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#9479#9480#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#10320#10321#0" expanded="true" />
-            <element signature="e#10369#10370#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#9992#9993#0" expanded="true" />
+            <element signature="e#10035#10036#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10882#10883#0" expanded="true" />
           </folding>
         </state>
       </provider>
